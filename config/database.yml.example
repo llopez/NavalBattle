@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *default
+  database: naval_dev
+
+test:
+  <<: *default
+  database: naval_test
+
+production:
+  <<: *default
+  database: naval_prod
